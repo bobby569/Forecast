@@ -6,8 +6,8 @@
 	"repository": "https://github.com/bobby569/Forecast.git",
 	"scripts": {
 		"clean": "rimraf dist",
-		"start": "env=dev webpack-dev-server --hot --color",
-		"build": "npm run clean && env=prod webpack --progress --hide-modules",
+		"start": "NODE_ENV=development webpack-dev-server --hot --color",
+		"build": "npm run clean && NODE_ENV=production webpack --progress --hide-modules",
 		"deploy": "gh-pages -d dist",
 		"test": "mocha"
 	},
@@ -41,7 +41,6 @@
 		"lodash": "^4.17.4",
 		"react": "^16.2.0",
 		"react-dom": "^16.2.0",
-		"react-google-maps": "^9.4.3",
 		"react-redux": "5.0.6",
 		"react-router": "^4.2.0",
 		"react-sparklines": "^1.7.0",
